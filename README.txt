@@ -28,10 +28,12 @@ wish to send to:
 
 $ python client1.py -f filetosend.txt -d 123.4.56.789 -u 8888 -v 9999
 
-The client3.py and server3.py are run exactly the same, but for client/server2 the commands are exactly the same with one extra argument:
+The client3.py and server3.py are run exactly the same, but for client2/server2 the commands have one more argument:
 
 $ python server2.py -f filetoreceive.txt -u 9999 -v 8888 -k keyfile
 $ python client2.py -f filetosend.txt -d 123.4.56.789 -u 8888 -v 9999 -k keyfile
 
 Where the -k flag indicates a keyfile and where "keyfile" is the name of that file. For all 3 versions both machines must have the 
-sock352.py file and for the client2/serv2 case both must have a valid keyfile.
+sock352.py file and for the client2/server2 case both must have a valid keyfile. 
+
+The client2/server2 files encrypt and then decrypt the data being sent.
